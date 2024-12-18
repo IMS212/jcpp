@@ -883,7 +883,9 @@ public class LexerSource extends Source {
 		}
 
 		if (tok == null) {
-			if (Character.isWhitespace(c)) {
+			//if (c == '\n') {
+				//tok = new Token(NL, "\n");
+			 if (Character.isWhitespace(c)) {
 				tok = whitespace(c);
 			} else if (Character.isDigit(c)) {
 				unread(c);
